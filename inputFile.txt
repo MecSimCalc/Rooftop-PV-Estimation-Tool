@@ -1,0 +1,8 @@
+mode=silent
+destinationFolder=/opt/mcr
+agreeToLicense=yes
+product.MATLAB Runtime - Core
+product.MATLAB Runtime - Graphics
+product.MATLAB Runtime - Non Interactive MATLAB
+product.MATLAB Runtime - Numerics
+product.MATLAB Runtime - Fixed-Point Designer Addin
