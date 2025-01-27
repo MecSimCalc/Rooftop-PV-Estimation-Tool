@@ -68,8 +68,6 @@ RUN apt-get update && \
 # Cleanup the apt cache to reduce image size
 RUN rm -rf /var/lib/apt/lists/*
 
-# WORKDIR /usr/local/MATLAB
-
 COPY app.py ${LAMBDA_TASK_ROOT}/ 
 COPY lambda-entrypoint.sh /
 RUN dos2unix /lambda-entrypoint.sh
@@ -89,7 +87,6 @@ RUN sudo chmod +x ${LAMBDA_TASK_ROOT}/run_app.sh
 RUN sudo chmod +x ${LAMBDA_TASK_ROOT}/run_appDetailed.sh
 RUN sudo chmod +x ${LAMBDA_TASK_ROOT}/app
 RUN sudo chmod +x ${LAMBDA_TASK_ROOT}/appDetailed
-#RUN sudo chmod +x /lambda-entrypoint.sh
 
 RUN mkdir -p /var
 RUN mkdir -p /var/adm
